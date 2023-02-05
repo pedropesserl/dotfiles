@@ -11,7 +11,9 @@ O script de setup presume que se deseja colocar todos os dotfiles no diretório 
 
 Emulador: https://gnome-terminator.org
 
-`$ sudo apt install terminator`
+```
+$ sudo apt install terminator
+```
 
 Tema: https://github.com/morhetz/gruvbox
 
