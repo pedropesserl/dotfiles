@@ -1,9 +1,10 @@
+Neovim plugin manager: [](https://github.com/junegunn/vim-plug)
 
-### Configurações do terminal:
+### Configurações do terminal
 
-Emulador: [Terminator](https://gnome-terminator.org/)
-- `sudo apt install terminator`
+Emulador: [](https://gnome-terminator.org/)
+`sudo apt install terminator`
 
-Tema: [Gruvbox](https://github.com/morhetz/gruvbox)
+Tema: [](https://github.com/morhetz/gruvbox)
 
-Fonte: [Monocode](https://github.com/aaronmbos/monocode)
+Fonte: [](https://github.com/aaronmbos/monocode)
