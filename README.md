@@ -1,4 +1,4 @@
-Neovim plugin manager: [](https://github.com/junegunn/vim-plug)
+Neovim plugin manager: https://github.com/junegunn/vim-plug
 
 ### Configurações do terminal
 
