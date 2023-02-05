@@ -5,7 +5,7 @@ $ chmod u+x setup.sh
 $ ./setup.sh
 ```
 
-O script de setup presume que se deseja colocar todos os dotfiles no diretório home, com o mesmo caminho especificado aqui. Os arquivos que já existem serão substituídos, e os que não existem serão criados com um hard link.
+O script de setup presume que se deseja colocar todos os dotfiles no diretório home, com o mesmo caminho especificado aqui. Os arquivos que já existem no caminho de destino serão substituídos (e não apensados), e os que não existem serão criados com um hard link.
 
 ### Configurações do terminal
 
