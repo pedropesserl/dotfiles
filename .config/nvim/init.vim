@@ -22,20 +22,21 @@ vn <C-y> "+y
 nn nt :NERDTree<CR>
 
 filetype plugin indent on
+set et
 set ts=4 sw=4
 set number
 set incsearch
 
 call plug#begin()
-	Plug 'scrooloose/nerdtree'      "arvore de arquivos
-	Plug 'morhetz/gruvbox'		    "tema
-	Plug 'tpope/vim-commentary'	    "comentarios
-	Plug 'tpope/vim-fugitive'	    "git
-	Plug 'vim-airline/vim-airline'	"barra bonita
-	Plug 'ms-jpq/coq_nvim'			"autocomplete
-	Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-	Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
-	Plug 'lervag/vimtex'			"vimtex
+    Plug 'scrooloose/nerdtree'      "arvore de arquivos
+    Plug 'morhetz/gruvbox'          "tema
+    Plug 'tpope/vim-commentary'	    "comentarios
+    Plug 'tpope/vim-fugitive'       "git
+    Plug 'vim-airline/vim-airline'  "barra bonita
+    Plug 'ms-jpq/coq_nvim'          "autocomplete
+    Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+    Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+    Plug 'lervag/vimtex'            "vimtex
 call plug#end()
 
 if (empty($TMUX))

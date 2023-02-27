@@ -1,7 +1,7 @@
 syntax on
 
 set background=dark
-
+set expandtab
 set autoindent
 
 "Workaround no problema do Vim de nao reconhecer a tecla Alt
@@ -45,12 +45,12 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'morhetz/gruvbox'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'morhetz/gruvbox'
+    Plugin 'tpope/vim-commentary'
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'vim-airline/vim-airline'
 call vundle#end()
 
 if !exists('g:airline_symbols')
