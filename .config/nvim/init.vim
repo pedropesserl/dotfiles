@@ -4,12 +4,12 @@ nn J :+7<CR>
 vn K :-7<CR>
 vn K :+7<CR>
 
-nn <A-k> :m-2<CR>== 
-nn <A-j> :m+<CR>==
+nn <A-j> :m+<CR>==gn
+nn <A-k> :m-2<CR>==gn
 ino <A-k> <Esc>:m-2<CR>==gi
 ino <A-j> <Esc>:m+<CR>==gi
-vn <A-k> :m '<-2<CR>gv=gv
 vn <A-j> :m '>+<CR>gv=gv
+vn <A-k> :m '<-2<CR>gv=gv
 
 nn <A-K> :m-8<CR>==
 nn <A-J> :m+7<CR>==
