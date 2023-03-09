@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=(".bashrc" ".bash_aliases" ".config/nvim/init.vim" ".vimrc")
+FILES=(".bashrc" ".bash_aliases" ".config/nvim/init.vim" ".vimrc" ".tmux.conf")
 
 for file in ${FILES[@]}; do
     if [ -f $HOME/$file ]; then
