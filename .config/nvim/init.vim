@@ -4,8 +4,8 @@ nn J :+7<CR>
 vn K :-7<CR>
 vn K :+7<CR>
 
-nn <A-j> :m+<CR>==gn
-nn <A-k> :m-2<CR>==gn
+nn <A-j> :m+<CR>==
+nn <A-k> :m-2<CR>==
 ino <A-k> <Esc>:m-2<CR>==gi
 ino <A-j> <Esc>:m+<CR>==gi
 vn <A-j> :m '>+<CR>gv=gv
