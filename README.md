@@ -9,12 +9,6 @@ O script de setup presume que se deseja colocar todos os dotfiles no diretório 
 
 ### Configurações do terminal
 
-Emulador: https://gnome-terminator.org
-
-```
-$ sudo apt install terminator
-```
-
 Tema: https://github.com/morhetz/gruvbox
 
 Fonte: https://github.com/aaronmbos/monocode
