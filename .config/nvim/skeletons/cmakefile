@@ -1,0 +1,18 @@
+CC = gcc
+CFLAGS = -Wall -Wextra
+OBJ = nome_do_projeto.o
+DEPS = 
+
+%.o: %c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+all: nome_do_projeto
+
+nome_do_projeto: $(OBJ)
+	$(CC) -o $@ $^
+
+clean:
+	rm -f $(OBJ)
+
+purge:
+	rm -f $(OBJ) nome_do_projeto

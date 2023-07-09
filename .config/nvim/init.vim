@@ -1,4 +1,3 @@
-nn <C-k> K
 nn K :-7<CR>
 nn J :+7<CR>
 vn K :-7<CR>
@@ -17,6 +16,24 @@ ino <A-K> <Esc>:m-8<CR>==gi
 ino <A-J> <Esc>:m+7<CR>==gi
 vn <A-K> :m '<-8<CR>gv=gv
 vn <A-J> :m '>+7<CR>gv=gv
+
+function! Boilerplate(file)
+    if a:file == "c"
+        0r ~/.config/nvim/skeletons/c
+    elseif a:file == "texarticle"
+        0r ~/.config/nvim/skeletons/texarticle
+    elseif a:file == "cmakefile"
+        0r ~/.config/nvim/skeletons/cmakefile
+    endif
+    "remover a ultima linha em branco
+    normal! G
+    normal! dd
+    normal! gg
+endfunction
+
+command! C :call Boilerplate("c")
+command! Tex :call Boilerplate("texarticle")
+command! -narg=1 Make :call Boilerplate("cmakefile") | %s/nome_do_projeto/<args>/g
 
 vn <C-y> "+y
 nn nt :NERDTree<CR>
