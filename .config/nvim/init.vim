@@ -17,7 +17,7 @@ ino <A-J> <Esc>:m+7<CR>==gi
 vn <A-K> :m '<-8<CR>gv=gv
 vn <A-J> :m '>+7<CR>gv=gv
 
-function! Boilerplate(file)
+function! Skeleton(file)
     if a:file == "c"
         0r ~/.config/nvim/skeletons/c
     elseif a:file == "texarticle"
@@ -31,9 +31,11 @@ function! Boilerplate(file)
     normal! gg
 endfunction
 
-command! C :call Boilerplate("c")
-command! Tex :call Boilerplate("texarticle")
-command! -narg=1 Make :call Boilerplate("cmakefile") | %s/nome_do_projeto/<args>/g
+command! C :call Skeleton("c")
+command! Tex :call Skeleton("texarticle")
+command! -narg=1 Make :call Skeleton("cmakefile") | %s/nome_do_projeto/<args>/g
+
+command! CtoH :%s/ {\n\([^}]*\n\)*}/;/
 
 vn <C-y> "+y
 nn nt :NERDTree<CR>
@@ -45,28 +47,18 @@ set number
 set incsearch
 
 call plug#begin()
-    Plug 'scrooloose/nerdtree'      "arvore de arquivos
-    Plug 'morhetz/gruvbox'          "tema
-    Plug 'tpope/vim-commentary'	    "comentarios
-    Plug 'tpope/vim-fugitive'       "git
-    Plug 'vim-airline/vim-airline'  "barra bonita
-    Plug 'ms-jpq/coq_nvim'          "autocomplete
-    Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-    Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
-    Plug 'lervag/vimtex'            "vimtex
+    Plug 'scrooloose/nerdtree'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-fugitive'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'lervag/vimtex'
+    Plug 'matsuuu/pinkmare'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
-if (empty($TMUX))
-  if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-    if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-autocmd vimenter * ++nested colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+set termguicolors
+colorscheme pinkmare
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -74,7 +66,10 @@ endif
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.colnr = ':'
 au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%%  ','linenr','colnr'])
+let g:airline_solarized_bg='dark'
 
 let g:vimtex_view_method = 'zathura'
 
-autocmd VimEnter * COQnow -s
+" rodar comandos no startup
+autocmd VimEnter * TSEnable highlight
+autocmd VimEnter * AirlineTheme base16
