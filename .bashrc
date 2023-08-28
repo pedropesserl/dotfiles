@@ -128,3 +128,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 PROMPT_DIRTRIM=1
 
 tabs 4;
+bind -s 'set completion-ignore-case on' # tab case-insensitive
