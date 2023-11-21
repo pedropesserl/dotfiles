@@ -9,10 +9,10 @@ O script de setup presume que se deseja colocar todos os dotfiles no diretório 
 
 ### Configurações do terminal
 
-Tema: https://github.com/morhetz/gruvbox
+Tema: https://github.com/matsuuu/pinkmare
 
 Fonte: https://github.com/aaronmbos/monocode
 
 ### Miscelânea
 
-Neovim/Vim plugin manager: https://github.com/junegunn/vim-plug
+Neovim/Vim plugin manager: https://github.com/wbthomason/packer-nvim
