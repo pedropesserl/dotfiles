@@ -15,6 +15,7 @@ FILES=(
     ".config/nvim/skeletons/texarticle"
     ".config/nvim/skeletons/c"
     ".config/nvim/skeletons/cmakefile"
+    ".config/kitty/kitty.conf"
     ".vimrc"
     ".tmux.conf"
 )

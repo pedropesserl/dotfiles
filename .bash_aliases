@@ -11,3 +11,7 @@ cc() {
     echo "gcc $1.c -o $1 -Wall -Wextra -Wshadow -Wnull-dereference";
     gcc $1.c -o $1 -Wall -Wextra -Wshadow -Wnull-dereference;
 }
+ccpp() {
+    echo "g++ $1.cpp -o $1 -Wall -Wextra -Wshadow -Wnull-dereference";
+    g++ $1.cpp -o $1 -Wall -Wextra -Wshadow -Wnull-dereference;
+}
