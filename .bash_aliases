@@ -8,10 +8,10 @@ alias nvimkitty='nvim ~/.config/kitty/kitty.conf'
 alias bc='bc -lq'
 alias gdb='gdb -q'
 cc() {
-    echo "gcc $1.c -o $1 -Wall -Wextra -Wshadow -Wnull-dereference";
-    gcc $1.c -o $1 -Wall -Wextra -Wshadow -Wnull-dereference;
+    echo gcc $1.c -o "$@" -Wall -Wextra -Wshadow -Wnull-dereference;
+    gcc $1.c -o "$@" -Wall -Wextra -Wshadow -Wnull-dereference;
 }
 ccpp() {
-    echo "g++ $1.cpp -o $1 -Wall -Wextra -Wshadow -Wnull-dereference";
-    g++ $1.cpp -o $1 -Wall -Wextra -Wshadow -Wnull-dereference;
+    echo g++ $1.cpp -o "$@" -Wall -Wextra -Wshadow -Wnull-dereference;
+    g++ $1.cpp -o "$@" -Wall -Wextra -Wshadow -Wnull-dereference;
 }
