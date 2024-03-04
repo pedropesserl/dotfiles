@@ -122,6 +122,17 @@ if test -f ~/.rvm/scripts/rvm; then
     [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
 fi
 
+export LIKWID_HOME="/home/soft/likwid"
+
+if [ -d "${LIKWID_HOME}" ] ; then
+    PATH="$PATH:${LIKWID_HOME}/bin:${LIKWID_HOME}/sbin"
+    export LIKWID_LIB="${LIKWID_HOME}/lib"
+    export LIKWID_INCLUDE="${LIKWID_HOME}/include"
+    export LIKWID_MAN="${LIKWID_HOME}/man"
+    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${LIKWID_LIB}"
+    export MANPATH="$MANPATH:${LIKWID_MAN}"
+fi
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
