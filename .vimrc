@@ -39,27 +39,6 @@ inoremap <A-J> <Esc>:m+7<CR>==gi
 vnoremap <A-K> :m '<-8<CR>gv=gv
 vnoremap <A-J> :m '>+7<CR>gv=gv
 
-nnoremap nt :NERDTree<CR>
-
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-    Plugin 'VundleVim/Vundle.vim'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'morhetz/gruvbox'
-    Plugin 'tpope/vim-commentary'
-    Plugin 'tpope/vim-fugitive'
-    Plugin 'vim-airline/vim-airline'
-call vundle#end()
-
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.linenr = ''
-let g:airline_symbols.colnr = ':'
-au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%%  ','linenr','colnr'])
-
 filetype plugin indent on
 set ts=4 sw=4
 set number
@@ -73,6 +52,3 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-autocmd vimenter * ++nested colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox

@@ -12,5 +12,5 @@ vim.api.nvim_create_autocmd({"User"}, {
 
 vim.api.nvim_create_autocmd({"VimEnter"}, {
     pattern = "*",
-    command = "AirlineTheme base16",
+    command = "AirlineTheme violet",
 })
