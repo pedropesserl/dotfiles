@@ -17,4 +17,5 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("v", "<C-y>", "\"+y")
-vim.keymap.set("n", "nt", ":NERDTree<CR>")
+vim.keymap.set("n", " nt", ":NERDTree<CR>")
+vim.keymap.set("n", " w", "<C-w>")
