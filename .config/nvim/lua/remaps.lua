@@ -1,6 +1,3 @@
-vim.keymap.set("n", "K", ":-7<CR>")
-vim.keymap.set("n", "J", ":+7<CR>")
-
 vim.keymap.set("n", "<A-j>", ":m+<CR>==")
 vim.keymap.set("n", "<A-k>", ":m-2<CR>==")
 vim.keymap.set("v", "<A-j>", ":m '>+<CR>gv=gv")
