@@ -9,6 +9,7 @@ alias kitty='~/.local/kitty.app/bin/kitty'
 alias nvimkitty='nvim ~/.config/kitty/kitty.conf'
 alias bc='bc -lq'
 alias gdb='gdb -q'
+alias py='python3'
 cc() {
     echo gcc $1.c -o "$@" -Wall -Wextra -Wshadow -Wnull-dereference;
     gcc $1.c -o "$@" -Wall -Wextra -Wshadow -Wnull-dereference;
