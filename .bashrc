@@ -139,7 +139,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 PROMPT_DIRTRIM=1
 
 tabs 4;
-bind -s 'set completion-ignore-case on' # tab case-insensitive
+bind -s 'set completion-ignore-case on' # case-insensitive tab completion
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
