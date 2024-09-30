@@ -12,4 +12,4 @@ function color_bg()
     vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#202330" })
 end
 
-transparent_bg()
+-- transparent_bg()
