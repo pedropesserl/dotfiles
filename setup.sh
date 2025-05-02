@@ -20,6 +20,15 @@ FILES=(
     ".tmux.conf"
 )
 
+if [ -d $HOME/.config/nvim ]; then
+    rm -r $HOME/.config.nvim
+fi
+mkdir -p $HOME/.config/nvim/{lua,after,skeletons}
+if [ -d $HOME/.config/kitty ]; then
+    rm -r $HOME/.config.nvim
+fi
+mkdir $HOME/.config/kitty
+
 for file in ${FILES[@]}; do
     if [ -f $HOME/$file ]; then
         rm $HOME/$file
