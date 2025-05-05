@@ -14,3 +14,4 @@ vim.g.loaded_matchparen = false
 
 vim.opt.path = vim.opt.path + "/usr/include/c++/*"
 vim.opt.path = vim.opt.path + "/usr/include/x86_64-linux-gnu/"
+vim.opt.path = vim.opt.path + "/usr/lib/gcc/x86-64-linux-gnu/9/include"
