@@ -21,11 +21,11 @@ FILES=(
 )
 
 if [ -d $HOME/.config/nvim ]; then
-    rm -r $HOME/.config.nvim
+    rm -r $HOME/.config/nvim
 fi
-mkdir -p $HOME/.config/nvim/{lua,after,skeletons}
+mkdir -p $HOME/.config/nvim/{lua,after/plugin,skeletons}
 if [ -d $HOME/.config/kitty ]; then
-    rm -r $HOME/.config.nvim
+    rm -r $HOME/.config/kitty
 fi
 mkdir $HOME/.config/kitty
 
