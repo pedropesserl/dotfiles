@@ -1,17 +1,16 @@
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
-    use 'matsuuu/pinkmare'
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use 'tpope/vim-commentary'
-    use 'tpope/vim-fugitive'
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
-    use 'lervag/vimtex'
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
-    use 'preservim/nerdtree'
-end)
+return {
+    'matsuuu/pinkmare',
+    'nvim-treesitter/nvim-treesitter',
+    'tpope/vim-commentary',
+    'tpope/vim-fugitive',
+    'vim-airline/vim-airline',
+    'vim-airline/vim-airline-themes',
+    'lervag/vimtex',
+    {
+        'iamcco/markdown-preview.nvim',
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
+    'preservim/nerdtree',
+}

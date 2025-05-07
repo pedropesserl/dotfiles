@@ -1,6 +1,6 @@
 alias gst='git status'
 alias gdb='gdb -q'
-# alias nvim='~/nvim.appimage'
+alias nvim='~/nvim.appimage'
 alias nvimnvim='nvim ~/.config/nvim/init.lua'
 alias logisim='java -jar ~/downloads/logisim-evolution-3.8.0-all.jar'
 alias MARS='java -jar ~/downloads/Mars4_5.jar'
