@@ -4,6 +4,7 @@ FILES=(
     ".bashrc"
     ".bash_aliases"
     ".config/nvim/init.lua"
+    ".config/nvim/lua/config/lazy.lua"
     ".config/nvim/lua/functions.lua"
     ".config/nvim/lua/opts.lua"
     ".config/nvim/lua/plugins.lua"
@@ -23,7 +24,7 @@ FILES=(
 if [ -d $HOME/.config/nvim ]; then
     rm -r $HOME/.config/nvim
 fi
-mkdir -p $HOME/.config/nvim/{lua,after/plugin,skeletons}
+mkdir -p $HOME/.config/nvim/{lua/config,after/plugin,skeletons}
 if [ -d $HOME/.config/kitty ]; then
     rm -r $HOME/.config/kitty
 fi
